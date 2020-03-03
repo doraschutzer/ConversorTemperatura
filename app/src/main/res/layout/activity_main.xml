@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edittext_entrada"
+        android:textAlignment="center"
+        android:hint="Temperatura em Fahrenheit"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_blue_bright"/>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/button_fahrenheittocelsius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Converter para Celsius" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/textview_saida"
+        android:textColor="#F45207"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
