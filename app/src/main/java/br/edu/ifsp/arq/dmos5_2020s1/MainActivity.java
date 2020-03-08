@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private EditText entradaEditText;
     private Button fareinheit2celsiusButton;
+    private Button celsius2fahrenheitButton;
     private TextView saidaTextView;
 
     @Override
@@ -23,14 +24,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         entradaEditText = findViewById(R.id.edittext_entrada);
         saidaTextView = findViewById(R.id.textview_saida);
         fareinheit2celsiusButton = findViewById(R.id.button_fahrenheittocelsius);
+        celsius2fahrenheitButton = findViewById(R.id.button_celsiustofahrenheit);
 
         fareinheit2celsiusButton.setOnClickListener(this);
+        celsius2fahrenheitButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if (v == fareinheit2celsiusButton) {
             paraCelsius();
+        }
+        if (v == celsius2fahrenheitButton) {
+            paraFahrenheit();
         }
     }
 
@@ -59,4 +65,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         saidaTextView.setText(String.format("%.2fºC", (temperatura-32)/1.8));
     }
 
+    public void paraFahrenheit() {
+        double temperatura;
+
+        try {
+            temperatura = getEntrada();
+        } catch (NumberFormatException ex) {
+            Toast.makeText(this, "Entrada inválida!", Toast.LENGTH_SHORT).show();
+            temperatura = 0;
+        }
+
+        saidaTextView.setText(String.format("%.2fºF", (1.8*temperatura+32)));
+    }
 }

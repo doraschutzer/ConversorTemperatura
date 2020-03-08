@@ -11,25 +11,35 @@
     <EditText
         android:id="@+id/edittext_entrada"
         android:textAlignment="center"
-        android:hint="Temperatura em Fahrenheit"
+        android:hint="Temperatura"
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="25dp"
         android:backgroundTint="@android:color/holo_blue_bright"/>
 
     <LinearLayout
         android:layout_marginTop="40dp"
         android:layout_marginBottom="40dp"
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
 
         <Button
             android:id="@+id/button_fahrenheittocelsius"
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Converter para Celsius" />
+            android:layout_marginRight="10dp"
+            android:text="Celsius" />
+
+        <Button
+            android:id="@+id/button_celsiustofahrenheit"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit" />
 
     </LinearLayout>
 
